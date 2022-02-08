@@ -1,0 +1,88 @@
+@mixin left-top-pos($left, $top) {
+    left: $left;
+    top: $top;
+}
+
+.background {
+    
+    @include left-top-pos(0%, 0%);
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-color: #223c50;
+    
+    opacity: 0.1;
+    z-index: 3;
+}
+
+.full {
+
+    @include left-top-pos(5%, 6.5%);
+
+    position: absolute;
+    
+
+    width: 85%;
+    min-height: 400px;
+    margin: 0 auto 0 auto;
+    padding: 0.8% 2.5%;
+
+    text-align: center;
+
+    background-color: white;
+    border-radius: 7px;
+
+    z-index: 10;
+
+    .backButton {
+
+        @include left-top-pos(94.5%, 1%);
+
+        position: absolute;
+
+        a {
+            text-decoration: none;
+
+            font-size: 18px;
+            font-weight: 600;
+
+            color: black;
+        }
+    }
+
+    
+
+    .horizontalImg {
+        max-width: 55%;
+        max-height: 55%;
+    }
+
+    .verticalImg {
+        max-width: 29%;
+        max-height: 29%;
+    }
+
+    .author {
+        margin: 0 0 10px 0;
+
+        text-align: start;
+
+        font-size: 26px;
+        font-weight: 500;
+    }
+
+    .stuff {
+        display: flex;
+        justify-content: space-between;
+
+        .stuffItem {
+            margin: 2%  0% 0.5%;
+
+            font-size: 18px;
+            font-weight: 400;        
+        }
+    }
+
+}
