@@ -3,7 +3,6 @@ import s from './fullPhoto.module.scss';
 import { NavLink } from "react-router-dom";
 
 const FullPhoto = ({ currentPhoto }) => {
-    let imgClass = "";
 
     if(!currentPhoto) {
         return <div>loading...</div>

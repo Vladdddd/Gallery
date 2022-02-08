@@ -3,6 +3,12 @@
     top: $top;
 }
 
+@mixin max-width-height($width, $height) {
+    max-width: $width;
+    max-height: $height;
+}
+
+
 .background {
     
     @include left-top-pos(0%, 0%);
@@ -19,13 +25,12 @@
 
 .full {
 
-    @include left-top-pos(5%, 6.5%);
+    @include left-top-pos(5%, 8%);
 
     position: absolute;
     
 
     width: 85%;
-    min-height: 400px;
     margin: 0 auto 0 auto;
     padding: 0.8% 2.5%;
 
@@ -38,7 +43,7 @@
 
     .backButton {
 
-        @include left-top-pos(94.5%, 1%);
+        @include left-top-pos(91%, 1%);
 
         position: absolute;
 
@@ -49,19 +54,47 @@
             font-weight: 600;
 
             color: black;
+
+            @media (max-width: 1000px) {
+                font-size: 14px
+            }
+
+            @media (max-width: 500px) {
+                font-size: 10px
+            }
+        }
+
+        @media (max-width: 768px) {
+            @include left-top-pos(87%, 1%);
         }
     }
 
     
 
     .horizontalImg {
-        max-width: 55%;
-        max-height: 55%;
+        @include max-width-height(60%, 60%);
+        border-radius: 8px;
+
+        @media (max-width: 768px) {
+            @include max-width-height(65%, 65%);
+        }
+
+        @media (max-width: 500px) {
+            @include max-width-height(85%, 85%);
+        }
     }
 
     .verticalImg {
-        max-width: 29%;
-        max-height: 29%;
+        @include max-width-height(30%, 30%);
+        border-radius: 8px;
+
+        @media (max-width: 768px) {
+            @include max-width-height(40%, 40%);
+        }
+
+        @media (max-width: 500px) {
+            @include max-width-height(80%, 80%);
+        }
     }
 
     .author {
@@ -71,6 +104,14 @@
 
         font-size: 26px;
         font-weight: 500;
+
+        @media (max-width: 768px) {
+            font-size: 20px
+        }
+
+        @media (max-width: 500px) {
+            font-size: 16px
+        }
     }
 
     .stuff {
@@ -81,7 +122,15 @@
             margin: 2%  0% 0.5%;
 
             font-size: 18px;
-            font-weight: 400;        
+            font-weight: 400;  
+            
+            @media (max-width: 768px) {
+                font-size: 14px
+            }
+
+            @media (max-width: 500px) {
+                font-size: 11px
+            }
         }
     }
 

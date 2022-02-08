@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import s from './list.module.scss';
 
 const ListItem = ({ onImgClicked, photoInfo }) => {
-    //console.log(photoInfo);
     return (
         <div className={s.listItem}>
             <div className={s.imgWrapper}>

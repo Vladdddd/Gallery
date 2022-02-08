@@ -1,5 +1,4 @@
 import { Provider } from 'react-redux';
-import './App.css';
 import store from '../../redux/redux-store';
 import { BrowserRouter } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
